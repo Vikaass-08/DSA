@@ -1,8 +1,26 @@
-package KstStringSearch;
+package KmpStringSearch;
 
-import java.util.*;
+/*
 
-public class SearchStringKSTAlgo {
+
+Time Complexity: O(M + N)
+Space Complexity: O(M)
+
+
+
+For the pattern “ABCDE”, 
+lps[] is [0, 0, 0, 0, 0]
+
+For the pattern “AABAACAABAA”, 
+lps[] is [0, 1, 0, 1, 2, 0, 1, 2, 3, 4, 5]
+
+For the pattern “AAACAAAAAC”, 
+lps[] is [0, 1, 2, 0, 1, 2, 3, 3, 3, 4] 
+
+
+*/
+
+public class SearchStringKMP {
     public static void main(String[] args) {
         String str = "abcxabcdabcdabcy";
         String subString = "abcdabcy";
@@ -11,11 +29,12 @@ public class SearchStringKSTAlgo {
     }
     
     public static boolean KMP(char[] str, char[] subString){
-        int lps[] = computeTemporaryArray(subString);
+        int lps[] = new int[subString.length];
+        computeTemporaryArray(subString, lps);
         int i = 0;
         int j = 0;
         while(i < str.length && j < subString.length){
-            if(str[i] == str[j]){
+            if(str[i] == subString[j]){
                 i++;
                 j++;
             }
@@ -32,8 +51,7 @@ public class SearchStringKSTAlgo {
         return false;
     }
     
-    public static int[] computeTemporaryArray(char[] pattern){
-        int[] lps = new int[pattern.length];
+    public static void computeTemporaryArray(char[] pattern, int[] lps){
         int index = 0;
         for(int i = 1; i < pattern.length;){
             if(pattern[i] == pattern[index]){
@@ -52,6 +70,5 @@ public class SearchStringKSTAlgo {
             }
         }
         
-        return lps;
     }
 }
