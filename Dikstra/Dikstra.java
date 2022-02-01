@@ -3,7 +3,10 @@ import java.util.*;
 
 /*
 
-   Dikstra Algo is used to find the minimum distance of all the nodes from the src Node in a weighted undirected  acyclic graph
+   Dikstra Algo is used to find the minimum distance of all the nodes from the src Node in a weighted acyclic graph
+   Dikstra Algo fails when there is negative weights in the graph.
+
+   When we have negative edges we use Bellman Ford algorithm
 
 */
 
