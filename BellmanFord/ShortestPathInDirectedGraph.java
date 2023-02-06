@@ -5,7 +5,7 @@ import java.util.*;
    Bellman Ford is used to find the minimum distance of every node from the source node in the directed weighted graph.
    It works even if we have negative weights, where Dikstra Algorithm fails.
    
-Disadvantages:
+Disadvantages: 
   It will not work if we have a cycle with overall negative weights.
 
   for ex: (0, -1) -> (1, 30) -> (2, -5) -> (0, -40)   => (node, weights)
