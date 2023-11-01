@@ -2,7 +2,7 @@ package SegmentTree;
 
 /*
 
-We are given an array of integers and we q queries, in each query we have to do oen of the folling operations.
+We are given an array of integers and we q queries, in each query we have to do one of the following operations.
 1) update the element at ith index with the given value:  update(i, val);
 2) get the sum of all the elements in the idx range [i, j]: getSum(i, j);
 
@@ -15,7 +15,7 @@ Eg: arr = [1, 3, 6, 0, 10, 7}
 
 Segment Tree:
 node : val(start idx, end idx)
-if(start idx == end idx) -> It means that it is the leaf node and it represent the element in the array at idx == start idx
+if(start idx == end idx) -> It means that it is the leaf node at position idx in the array
 
                                27 (0, 5)
 
