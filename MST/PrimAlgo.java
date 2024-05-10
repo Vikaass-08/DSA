@@ -2,33 +2,8 @@ package MST;
 
 import java.util.*;
 
-class Node implements Comparator<Node>
-{
-    private int v;
-    private int weight;
-    
-    Node(int _v, int _w) { v = _v; weight = _w; }
-    
-    Node() {}
-    
-    int getV() { return v; }
-    int getWeight() { return weight; }
-
-    @Override
-    public int compare(Node node1, Node node2) 
-    { 
-        if (node1.weight < node2.weight) 
-            return -1; 
-        if (node1.weight > node2.weight) 
-            return 1; 
-        return 0; 
-    } 
-}
-
 public class PrimAlgo {
-    
-    static void primsAlgo(ArrayList<ArrayList<Node>> adj, int N)
-    {
+    static void primsAlgo(ArrayList<ArrayList<Node>> adj, int N)  {
         // Key array is used to store the min path weight
         int key[] = new int[N];
         
@@ -45,7 +20,7 @@ public class PrimAlgo {
         // pq is used to get the minimum weight node that has not been added to the mst yet.
         PriorityQueue<Node> pq = new PriorityQueue<Node>(N, new Node());
 
-        // start from first node so its distance will be 0 and it will have no parent, since it is the start node.
+        // start from first node so its distance will be 0, and it will have no parent, since it is the start node.
         key[0] = 0;
         parent[0] = -1; 
         
@@ -78,8 +53,7 @@ public class PrimAlgo {
         }
     }
     
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         int n = 5;
         ArrayList<ArrayList<Node> > adj = new ArrayList<ArrayList<Node> >();
         for (int i = 0; i < n; i++) 

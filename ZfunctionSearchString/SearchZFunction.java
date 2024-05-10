@@ -12,8 +12,11 @@ Ex: str = "ababcdsdabbdabyu"
     
 output: pattern(ab) occurs 4 times in the str
 
+What is Z Array?
+> For a str[0..(n - 1)], Z Array is also of same length, and Z[i] store the length of the longest
+  substring that starts from str[i] which is also the prefix of str[0..(n-1)]
 
-Example of z function output:
+Example of Z function output:
 
 c[]  = "aaaaaa"
 Z[]  = {x, 5, 4, 3, 2, 1}

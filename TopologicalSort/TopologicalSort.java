@@ -7,7 +7,7 @@ import java.io.*;
 /*
     topological Sort: 1) acyclic,  2) directed graph,  3) It should follow ancestor-predeccor
     
-    Topological sort is not uniqe
+    Topological sort is not unique
     All the parent should come before the child.
 
       a

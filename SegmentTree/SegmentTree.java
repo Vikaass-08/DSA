@@ -11,7 +11,7 @@ We are given an array of integers and we q queries, in each query we have to do 
  Segment Tree is a tree like structure in which each node store the answer of some part
  > In the above question the segment tree will store the sum of element in the particular range
 
-Eg: arr = [1, 3, 6, 0, 10, 7}
+Eg: arr = [1, 3, 6, 0, 10, 7]
 
 Segment Tree:
 node : val(start idx, end idx)
@@ -38,7 +38,7 @@ public class SegmentTree {
         // Build a Segment Tree
         buildSegmentTree(arr, 0, n - 1, 0);
         
-        // Get sum of numbers in range 2 to 4 which are presnt in the array
+        // Get sum of numbers in range 2 to 4 which are present in the array
         int getSumInRange = getSum(0, n - 1, 2, 4, 0);
         System.out.println(getSumInRange);
         
@@ -107,7 +107,7 @@ public class SegmentTree {
             update(ss, mid, val, idx, 2 * np + 1);
         }
         
-        // After changing the value at idx, while comming back to the top we keep on updating 
+        // After changing the value at idx, while coming back to the top we keep on updating
         // the node vale with the sum of left and right child
         segTree[np] = segTree[2 * np + 1] + segTree[2 * np + 2];
     }

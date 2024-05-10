@@ -1,22 +1,8 @@
 package BinarySearchTree;
 
-
-public class BinarySearchTree {
-  public static void main(String[] args) {
-    ConstructTree tree = new ConstructTree();
-    tree.insert(10);
-    tree.insert(20);
-    tree.insert(5);
-    tree.insert(10);
-    tree.inorder();
-  }
-
-}
-
-
-class ConstructTree {
+public class BSTConstructor {
   Node root;
-  public ConstructTree() {
+  public BSTConstructor() {
     this.root = null;
   }
 
@@ -82,13 +68,3 @@ class ConstructTree {
 
 }
 
-
-class Node {
-  int value;
-  Node left, right;
-  public Node(int val){
-    this.value = val;
-    this.left = null;
-    this.right = null;
-  }
-}

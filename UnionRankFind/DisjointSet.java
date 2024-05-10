@@ -7,10 +7,10 @@ DisJoint Set can be used to find if 2 point belong to the same set or not.
 It has two important operations. UNION, FIND
 
 Union: In this we connect two nodes to each other based on their rank.
-Find: This operation is used to find the applsolute parent of the node. i.e if
-      A -> B -> C then the appsolute parent of C is A.
-      In each time we do a find operation we keep on updating the parent of each node. i.e
-      if we do a find operation on node C then we make sure that every node directly point to their appsolute 
+Find: This operation is used to find the absolute parent of the node. i.e. if
+      A -> B -> C then the absolute parent of C is A.
+      In each time we do a find operation we keep on updating the parent of each node. i.e.
+      if we do a find operation on node C then we make sure that every node directly point to their absolute
       parent.
 
 
@@ -51,17 +51,17 @@ class UnionFind{
         this.DSU = new pair[size];
         
         // This hold all the nodes in the tree along with their
-        // appsolute parent and their rank
+        // absolute parent and their rank
         for(int i = 0; i < size; i++){
             this.DSU[i] = new pair(-1, 0);
         }
     }
     
     public int find(int u) {
-        //Appsolute parent
+        //Absolute parent
         if(DSU[u].parent == -1) return u;
         
-        // Keep updating the appsolute parent of every node in the path
+        // Keep updating the absolute parent of every node in the path
         return DSU[u].parent = find(DSU[u].parent); 
     }
     

@@ -80,7 +80,7 @@ class Graph{
         for (int i = 0; i < n; i++) 
             transpose.add(new ArrayList<>());
 
-        // Create a new graph with the existing with with all the edges directions reversed
+        // Create a new graph with the existing with all the edges directions reversed
         for(int i = 0;i<n;i++) {
             vis[i] = 0; 
             for(int it: adj.get(i)) {
